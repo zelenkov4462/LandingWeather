@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+
+.main_container {
+  background-image: url(./img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10%;
+  align-items: center;
+}
+
+.inputFieldAndButton {
+  display: flex;
+  position: relative;
+}
+
+.warning {
+  color: red;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.showWarning {
+  opacity: 1;
+}
+
+form input[type=text] {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 0;
+  text-align:center;
+  outline: none;
+  min-width: 250px;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 260px;
+  top: 3px;
+}
+
+.search-button img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.search-button img:hover {
+  cursor: pointer;
+}
+
+.weatherForecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 70%;
+  max-width: 95%;
+  gap: 20px;
+}
+
+.forecastColumn {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  /* justify-items: space-between; */
+  justify-content: center;
+  gap: 10px;
+}
+
+/* OUTPUT INFO STYLE*/
+.city,
+.feelsLike,
+.weatherDescription {
+  font-size: 1.5rem;
+}
+
+.windSpeed,
+.humidity,
+.pressure {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.temperature,
+.bigTempSymbol {
+  font-size: 4rem;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+
+.additionalInfo {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "icon lable"
+    "icon value";
+}
+
+.infoLable {
+  grid-area: lable;
+}
+
+.infoIcon {
+  grid-area: icon;
+  place-self: center;
+}
+
+.infoValue {
+  grid-area: value;
+}
+
+.forecastInside {
+  display: flex;
+  align-items: center;
+  margin-top: -25px;
+  margin-bottom: -25px;
+  margin-left: -15px;
+  min-height: 100px;
+}
+
+.tempBlock {
+  display: flex;
+}
+
+.switcher:hover {
+  cursor: pointer;
+}
+
+.forecastColumn * {
+  opacity: 1;
+  transition: 0.25s ease-in-out;
+}
+
+.hideForecast {
+  opacity: 0;
+}
+
+.switcher {
+  opacity: 0.5;
+  margin-left: auto;
+  align-self: flex-start;
+}

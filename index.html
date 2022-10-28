@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool weather app</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="main_container">
+    <form action="#" method="GET">
+      <div class="inputFieldAndButton">
+        <input type="text" placeholder="Search city" class="inputField">
+        <button type="submit" class="search-button">
+          <img src="./img/search.png">
+        </button>
+      </div> 
+      <div class="warning">* Location incorrect!</div>
+    </form>
+    <div class="weatherForecast">
+      <div class="forecastColumn">
+        <div class="city"></div>
+        <div class="tempBlock">
+          <div class="temperature"></div>
+          <div class="tempSymbol bigTempSymbol"></div>
+          <div class="switcher">display °C</div>
+        </div>
+        <div class="tempBlock">
+          <div class="feelsLike"></div>
+          <div class="tempSymbol"></div>
+        </div>
+        <div class="forecastInside">
+          <div class="weatherIcon"></div>
+          <div class="weatherDescription"></div>
+        </div>
+      </div>
+      <div class="forecastColumn">
+        <div class="additionalInfo">
+          <div class="infoLable">WindSpeed</div>
+          <svg class="infoIcon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="white" d="M18.998 10a3.001 3.001 0 0 1 .176 5.995l-.207.005l-.102.006H17.7c.19.374.298.796.298 1.243c0 1.53-1.153 2.756-2.675 2.756c-1.505 0-2.415-.881-2.66-2.103a.75.75 0 0 1 1.47-.294c.114.565.457.897 1.19.897c.672 0 1.175-.534 1.175-1.256c0-.688-.568-1.25-1.273-1.25l-12.488.007a.75.75 0 0 1-.102-1.493l.102-.007h12.387l.101-.006c.065 0 .128.002.191.006l3.472.002l.054-.006l.2-.01a1.5 1.5 0 1 0-1.629-1.722l-.027.239A.75.75 0 0 1 16 12.816A3.001 3.001 0 0 1 18.998 10ZM12 12H2.756a.75.75 0 0 1-.102-1.493l.102-.007H12A2.5 2.5 0 1 0 9.5 8A.75.75 0 0 1 8 8a4 4 0 1 1 4.221 3.994l-.22.006H2.755H12Z"/></svg>
+          <div class="infoValue windSpeed"></div>
+        </div>
+        <div class="additionalInfo">
+          <div class="infoLable">Humidity</div>
+          <svg class="infoIcon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40"><g fill="white"><path d="M28.369 20.018c-1.985-6.528-7.827-13.495-8.124-13.847a.495.495 0 0 0-.731 0c-.297.352-6.14 7.318-8.126 13.847c-.407 1.339-.665 2.662-.665 3.903c0 5.048 4.108 9.155 9.156 9.155c5.048 0 9.154-4.107 9.154-9.155c.001-1.241-.257-2.563-.664-3.903zM19.88 32.12c-4.521 0-8.199-3.678-8.199-8.198c0-1.227.273-2.553.709-3.903c1.737-5.375 6.183-11.156 7.49-12.781c1.307 1.625 5.753 7.406 7.488 12.781c.436 1.351.709 2.676.709 3.903c0 4.52-3.677 8.198-8.197 8.198z"/><path d="M14.748 20.018c-.5 1.27-.834 2.542-.834 3.7a5.965 5.965 0 0 0 11.931 0c0-1.158-.334-2.43-.834-3.7H14.748z"/></g></svg>
+          <div class="infoValue humidity"></div>
+        </div>
+        <div class="additionalInfo">
+          <div class="infoLable">Pressure</div>
+          <svg class="infoIcon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="white" d="M6.5 15.024h7a.5.5 0 0 1 .09.992l-.09.008h-7a.5.5 0 0 1-.09-.992l.09-.008Zm-1.996-2h10.992a.5.5 0 0 1 .091.992l-.09.008H4.503a.502.502 0 0 1-.504-.5a.5.5 0 0 1 .413-.491l.09-.009Zm5.496-10c2.465 0 3.863 1.574 4.066 3.474h.062C15.714 6.498 17 7.735 17 9.261c0 1.526-1.286 2.763-2.872 2.763H5.872C4.286 12.024 3 10.787 3 9.261c0-1.469 1.192-2.67 2.697-2.758l.237-.005C6.139 4.586 7.535 3.024 10 3.024Zm0 1c-1.65 0-3.087 1.27-3.087 3.025c0 .278-.254.497-.545.497h-.55C4.814 7.546 4 8.324 4 9.285c0 .96.814 1.74 1.818 1.74h8.364c1.004 0 1.818-.78 1.818-1.74s-.814-1.74-1.818-1.74h-.55c-.29 0-.545-.218-.545-.496c0-1.777-1.438-3.025-3.087-3.025Z"/></svg>
+          <div class="infoValue pressure"></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="daylyHourly">daylyHourly</div> -->
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
